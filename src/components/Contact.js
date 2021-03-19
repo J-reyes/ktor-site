@@ -5,7 +5,6 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import background from "../assets/background.jpg";
-import mobileBackground from "../assets/mobileBackground.jpg";
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: "60em",
     paddingBottom: "10em",
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url(${mobileBackground})`,
+      backgroundImage: `url(${background})`,
     },
   },
 }));

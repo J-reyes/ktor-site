@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   socialContainer: {
     position: "absolute",
-    marginTop: "-6em",
+    marginTop: "-5.35em",
     right: "1.5em",
     [theme.breakpoints.down("xs")]: {
       right: "0.9em",
@@ -121,7 +121,7 @@ export default function Footer(props) {
                 to="/karai-banx"
                 className={classes.link}
               >
-                Karai Banx
+                Karai-Banx
               </Grid>
             </Grid>
           </Grid>
@@ -131,7 +131,7 @@ export default function Footer(props) {
                 item
                 component={Link}
                 onClick={() => props.setValue(2)}
-                to="/revolution"
+                to="/brand"
                 className={classes.link}
               >
                 Brand
@@ -168,7 +168,7 @@ export default function Footer(props) {
       </Hidden>
       <img
         className={classes.adornment}
-        alt="black decorative slash"
+        alt="ktor logo"
         src={footerAdornment}
       />
       {/* grid container for social media icons is ROW */}

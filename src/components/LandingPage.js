@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // makes sure extra space isn't filled with duplicate background image
     backgroundRepeat: "no-repeat",
     height: "60em",
-    paddingBottom: "10em",
+    
     [theme.breakpoints.down("md")]: {
         backgroundImage: `url(${background})`
     }
