@@ -49,7 +49,7 @@ export default function Artists(props) {
               gutterBottom
               component={Link}
               to="/ajb-yungbull"
-              style={{ textDecoration: "none", paddingTop: '1.2rem', marginBottom: '16px' }}
+              style={{ textDecoration: "none", paddingTop: '1.2rem', marginBottom: '16px', fontSize: '1.25rem' }}
             >
               View Artist
             </Typography>
@@ -66,7 +66,7 @@ export default function Artists(props) {
               gutterBottom
               component={Link}
               to="/karai-banx"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", fontSize: '1.25rem'  }}
             >
               View Artist
             </Typography>

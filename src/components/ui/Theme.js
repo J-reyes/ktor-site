@@ -42,7 +42,7 @@ export default createMuiTheme({
         },
         h3: {
             fontFamily: "Roboto",
-            fontSize: "1.25rem",
+            fontSize: "4rem",
             color: "white",
             fontWeight: "bold"
         },

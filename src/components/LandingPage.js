@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 // media query
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import background from "../assets/ktorlandingpagebackground.png"
+import background from "../assets/ktorlandingpagebackground.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
     // makes sure extra space isn't filled with duplicate background image
     backgroundRepeat: "no-repeat",
     height: "60em",
-    
+
     [theme.breakpoints.down("md")]: {
-        backgroundImage: `url(${background})`
-    }
-}
+      backgroundImage: `url(${background})`,
+    },
+  },
 }));
 
 export default function LandingPage(props) {
