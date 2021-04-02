@@ -165,17 +165,14 @@ export default function Contact(props) {
     setLoading(true);
 
     axios
-      .get(
-        "https://us-central1-material-ui-course-367fa.cloudfunctions.net/sendMail",
-        {
-          params: {
-            email: email,
-            name: name,
-            phone: phone,
-            message: message,
-          },
-        }
-      )
+      .get("https://us-central1-ktor-8dbfd.cloudfunctions.net/sendMail", {
+        params: {
+          email: email,
+          name: name,
+          phone: phone,
+          message: message,
+        },
+      })
       .then((res) => {
         // setLoading(false);
         // clear out our fields
@@ -201,6 +198,7 @@ export default function Contact(props) {
           backgroundColor: "#FF3232",
         });
       });
+
   };
 
   // const containg our send message content

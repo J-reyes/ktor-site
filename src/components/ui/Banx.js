@@ -15,6 +15,8 @@ import youtube from "../../assets/youtube.svg";
 import apple from "../../assets/apple-music.svg";
 import banxBioPic from "../../assets/banxBioPic.jpeg";
 
+import ArtistVideoPage from '../../artist/artist.video.page';
+
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     marginTop: "1em",
@@ -285,7 +287,12 @@ export default function Banx(props) {
         </Grid>
       </Grid>
       {/*Video CONTAINER*/}
-      <Grid
+      <ArtistVideoPage />
+    </Grid>
+  );
+}
+
+{/* <Grid
         item
         container
         alignItems={matchesMD ? "center" : undefined}
@@ -330,18 +337,7 @@ export default function Banx(props) {
         >
           <Grid item container direction="column" md>
             <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "center"}>
-                Filler Item
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                paragraph
-                align={matchesSM ? "center" : "center"}
-              >
-                Filler Item
-              </Typography>
+              <ArtistVideoPage />
             </Grid>
           </Grid>
         </Grid>
@@ -370,7 +366,4 @@ export default function Banx(props) {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-    </Grid>
-  );
-}
+      </Grid> */}

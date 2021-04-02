@@ -15,6 +15,8 @@ import youtube from "../../assets/youtube.svg";
 import apple from "../../assets/apple-music.svg";
 import ajbBioPic from "../../assets/ajbBioPic.jpeg";
 
+import ArtistVideoPage from "../../artist/artist.video.page";
+
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     marginTop: "1em",
@@ -276,7 +278,7 @@ export default function YungBull(props) {
         item
         container
         direction="row"
-        style={{ marginBottom: "10em", marginTop: "10em" }}
+        style={{ marginBottom: "5em", marginTop: "10em" }}
         className={classes.rowContainer}
       >
         <Grid item container direction="column" alignItems="center">
@@ -288,92 +290,7 @@ export default function YungBull(props) {
         </Grid>
       </Grid>
       {/*Video CONTAINER*/}
-      <Grid
-        item
-        container
-        alignItems={matchesMD ? "center" : undefined}
-        direction={matchesMD ? "column" : "row"}
-        justify="space-around"
-        styler={{ marginBottom: "20em" }}
-        className={classes.rowContainer}
-      >
-        <Grid
-          item
-          container
-          className={classes.itemContainer}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
-          direction={matchesSM ? "column" : "row"}
-          md
-        >
-          <Grid item container direction="column" md>
-            <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : undefined}>
-                Filler
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                paragraph
-                align={matchesSM ? "center" : undefined}
-              >
-                Filler Item
-              </Typography>
-             
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          container
-          className={classes.itemContainer}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
-          direction={matchesSM ? "column" : "row"}
-          md
-        >
-          <Grid item container direction="column" md>
-            <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "center"}>
-                Filler Item
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                paragraph
-                align={matchesSM ? "center" : "center"}
-              >
-                Filler Item
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          container
-          className={classes.itemContainer}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
-          direction={matchesSM ? "column" : "row"}
-          md
-        >
-          <Grid item container direction="column" md>
-            <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "right"}>
-                Filler Item
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                paragraph
-                align={matchesSM ? "center" : "right"}
-              >
-                Filler Item
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+      <ArtistVideoPage />
     </Grid>
   );
 }
