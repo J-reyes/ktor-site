@@ -181,7 +181,7 @@ export default function Footer(props) {
         <Grid
           item
           component={"a"}
-          href="http://www.twitter.com"
+          href="https://twitter.com/KTOR_Global"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -190,7 +190,7 @@ export default function Footer(props) {
         <Grid
           item
           component={"a"}
-          href="http://www.instagram.com"
+          href="https://www.instagram.com/ktor_global_/"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -199,7 +199,7 @@ export default function Footer(props) {
         <Grid
           item
           component={"a"}
-          href="http://www.youtube.com"
+          href="https://www.youtube.com/channel/UCI68ieuh3AXn_LwjyppdUpQ  "
           rel="noopener noreferrer"
           target="_blank"
         >

@@ -96,7 +96,7 @@ export default function YungBull(props) {
             <IconButton
               style={{ backgroundColor: "transparent" }}
               component={Link}
-              to="/services"
+              to="/"
               onClick={() => props.setSelectedIndex(0)}
             >
               <img src={backArrow} alt="Back to service Page" />
@@ -123,7 +123,7 @@ export default function YungBull(props) {
             <IconButton
               style={{ backgroundColor: "transparent" }}
               component={Link}
-              to="/mobileapps"
+              to="/karai-banx"
               onClick={() => props.setSelectedIndex(2)}
             >
               <img
@@ -147,7 +147,7 @@ export default function YungBull(props) {
           item
           container
           component={"a"}
-          href="http://www.spotify.com"
+          href="https://open.spotify.com/artist/4StOjhAC4iSToHWEzRLAek"
           rel="noopener noreferrer"
           target="_blank"
           direction="column"
@@ -163,7 +163,7 @@ export default function YungBull(props) {
           item
           container
           component={"a"}
-          href="http://www.apple.com"
+          href="https://music.apple.com/us/artist/ajb-yungbull/1458117072"
           rel="noopener noreferrer"
           target="_blank"
           direction="column"
@@ -183,7 +183,7 @@ export default function YungBull(props) {
           item
           container
           component={"a"}
-          href="http://www.youtube.com"
+          href="https://www.youtube.com/channel/UC2EwEw_Twdajz9NErBO-BKQ"
           rel="noopener noreferrer"
           target="_blank"
           direction="column"
@@ -278,7 +278,7 @@ export default function YungBull(props) {
         item
         container
         direction="row"
-        style={{ marginBottom: "5em", marginTop: "10em" }}
+        style={{ marginBottom: "8em", marginTop: "10em" }}
         className={classes.rowContainer}
       >
         <Grid item container direction="column" alignItems="center">

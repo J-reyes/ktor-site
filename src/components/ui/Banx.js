@@ -96,7 +96,7 @@ export default function Banx(props) {
             <IconButton
               style={{ backgroundColor: "transparent" }}
               component={Link}
-              to="/services"
+              to="/ajb-yungbull"
               onClick={() => props.setSelectedIndex(0)}
             >
               <img src={backArrow} alt="Back to service Page" />
@@ -127,7 +127,7 @@ export default function Banx(props) {
             <IconButton
               style={{ backgroundColor: "transparent" }}
               component={Link}
-              to="/mobileapps"
+              to="/brand"
               onClick={() => props.setSelectedIndex(2)}
             >
               <img
@@ -151,7 +151,7 @@ export default function Banx(props) {
           item
           container
           component={"a"}
-          href="http://www.spotify.com"
+          href="https://open.spotify.com/artist/1yztRpKZ4QgiQDZhcQhbGY"
           rel="noopener noreferrer"
           target="_blank"
           direction="column"
@@ -167,7 +167,7 @@ export default function Banx(props) {
           item
           container
           component={"a"}
-          href="http://www.apple.com"
+          href="https://music.apple.com/us/artist/karai-banx/1488240314"
           rel="noopener noreferrer"
           target="_blank"
           direction="column"
@@ -187,7 +187,7 @@ export default function Banx(props) {
           item
           container
           component={"a"}
-          href="http://www.youtube.com"
+          href="https://www.youtube.com/channel/UCxZCxJEL09lOZ1W5IwRm44A"
           rel="noopener noreferrer"
           target="_blank"
           direction="column"
@@ -254,7 +254,10 @@ export default function Banx(props) {
                 music that he's dispalyed work in and continues to grow as an
                 artist. At the age of 17, Karai Banx began writing to express
                 his feelings and thoughts, and since then has used writing as
-                away to deal with struggles in his life.
+                away to deal with struggles in his life. Karai Banx has a unique
+                sound and wants to share it with the world. He is looking to take
+                his opportunities to the next level, while always staying motivated
+                to unify withh his supporters.
               </Typography>
               <Typography
                 variant="body1"
@@ -262,9 +265,10 @@ export default function Banx(props) {
                 align={matchesSM ? "center" : "left"}
                 style={{ lineHeight: "2" }}
               >
-                He has been working tirelessly to better his craft and plans to
-                release new and improved music at least once every month here in
-                2020. So keep a look out for Karai Banx!
+                Karai Banx has been working tirelessly to better his craft and
+                plans to release new and improved music at least once every
+                month. He knows that his supporters have his back and he has theirs,
+                so keep a look out for Karai Banx!
               </Typography>
             </Grid>
           </Grid>
@@ -275,7 +279,7 @@ export default function Banx(props) {
         item
         container
         direction="row"
-        style={{ marginBottom: "10em", marginTop: "10em" }}
+        style={{ marginBottom: "8em", marginTop: "10em" }}
         className={classes.rowContainer}
       >
         <Grid item container direction="column" alignItems="center">

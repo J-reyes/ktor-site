@@ -75,7 +75,7 @@ const ArtistVideos = ({ videos }) => {
         direction={matchesSM ? "column" : "row"}
         md
       >
-        <Grid item container direction="row" md justify='center' justify="space-around">
+        <Grid item container direction="row" md justify='center' justify="space-around" style={{marginBottom: '2em'}}>
           {videos.map((video, index) =>
             video.name === "ajb" && currentLocation === "/ajb-yungbull" ? (
               <YouTube videoId={video.vidId} opts={opts} />

@@ -74,12 +74,13 @@ const useStyles = makeStyles((theme) => ({
     height: 45,
     width: 245,
     fontSize: "1rem",
+    background: "rgb(50, 48, 125)",
     "&:disabled": {
       backgroundColor: "#848485",
       color: "white",
     },
     "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
+      backgroundColor: "rgb(42, 39, 126)",
     },
     [theme.breakpoints.down("sm")]: {
       height: 40,
@@ -198,7 +199,6 @@ export default function Contact(props) {
           backgroundColor: "#FF3232",
         });
       });
-
   };
 
   // const containg our send message content
@@ -244,31 +244,6 @@ export default function Contact(props) {
                 We're waiting.
               </Typography>
             </Grid>
-            <Grid item container style={{ marginTop: "2em" }}>
-              <Grid item>
-                <img
-                  src={phoneIcon}
-                  alt="phone"
-                  style={{ marginRight: "0.5em" }}
-                />
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant="body1"
-                  style={{
-                    color: theme.palette.common.archblue,
-                    fontSize: "1rem",
-                  }}
-                >
-                  <a
-                    href="tel:5555555555"
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    (555) 555-5555
-                  </a>
-                </Typography>
-              </Grid>
-            </Grid>
             <Grid item container style={{ marginBottom: "2em" }}>
               <Grid item>
                 <img
@@ -292,7 +267,7 @@ export default function Contact(props) {
                     href="mailto:zachary@gmail.com"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    ktor@gmail.com
+                    killthemoffrecords@gmail.com
                   </a>
                 </Typography>
               </Grid>
@@ -383,12 +358,18 @@ export default function Contact(props) {
         </Grid>
       </Grid>
       <Dialog
+        className={classes.input}
         open={open}
         onClose={() => setOpen(false)}
         fullScreen={matchesXS}
         style={{ zIndex: 1302 }}
         PaperProps={{
           style: {
+            backgroundImage: `url(${background})`,
+            backgroundPosition: "center",
+            // to cover the whole container
+            backgroundSize: "cover",
+            backgroundColor: "#0A0B0D",
             paddingTop: matchesXS ? "1em" : "5em",
             paddingBottom: matchesXS ? "1em" : "5em",
             paddingLeft: matchesXS
