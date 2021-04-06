@@ -244,7 +244,7 @@ export default function Contact(props) {
                 We're waiting.
               </Typography>
             </Grid>
-            <Grid item container style={{ marginBottom: "2em" }}>
+            <Grid item container style={{ marginBottom: "2em", marginTop: "2em" }}>
               <Grid item>
                 <img
                   src={emailIcon}
