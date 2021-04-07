@@ -216,7 +216,7 @@ export default function YungBull(props) {
           <Grid item container direction="column" md>
             <Grid item align="center">
               <img
-                alt="Ajb yungbull bio picture"
+                alt="Ajb yungbull bio"
                 src={ajbBioPic}
                 className={classes.bioPic}
               />

@@ -10,14 +10,18 @@ import background from "../assets/ktorlandingpagebackground.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    marginTop: "1em",
+    marginTop: "3em",
     width: "100%",
     backgroundColor: "#0A0B0D",
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em",
+      marginTop: "2em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "2em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginTop: "2em",
+      height: "37em",
+      marginTop: "1em",
     },
   },
   background: {
@@ -27,10 +31,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     // makes sure extra space isn't filled with duplicate background image
     backgroundRepeat: "no-repeat",
-    height: "60em",
-
+    height: "65em",
+    [theme.breakpoints.down("xl")]: {
+      backgroundImage: `url(${background})`,
+      height: "53em",
+    },
     [theme.breakpoints.down("md")]: {
       backgroundImage: `url(${background})`,
+      height: "40em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: `url(${background})`,
+      height: "30em",
     },
   },
 }));

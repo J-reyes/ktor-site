@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Grid from "@material-ui/core/Grid";
-import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -13,10 +12,8 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Snackbar from "@material-ui/core/Snackbar";
 
 import background from "../assets/greenLineBackgroundsvg.svg";
-import phoneIcon from "../assets/phone.svg";
 import emailIcon from "../assets/email.svg";
 import airplane from "../assets/send.svg";
-import ButtonArrow from "../components/ui/buttonArrow";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {

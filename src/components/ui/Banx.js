@@ -220,7 +220,7 @@ export default function Banx(props) {
           <Grid item container direction="column" md>
             <Grid item align="center">
               <img
-                alt="Ajb yungbull bio picture"
+                alt="Banx Bio"
                 src={banxBioPic}
                 className={classes.bioPic}
               />
@@ -295,79 +295,3 @@ export default function Banx(props) {
     </Grid>
   );
 }
-
-{/* <Grid
-        item
-        container
-        alignItems={matchesMD ? "center" : undefined}
-        direction={matchesMD ? "column" : "row"}
-        justify="space-around"
-        styler={{ marginBottom: "20em" }}
-        className={classes.rowContainer}
-      >
-        <Grid
-          item
-          container
-          className={classes.itemContainer}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
-          direction={matchesSM ? "column" : "row"}
-          md
-        >
-          <Grid item container direction="column" md>
-            <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : undefined}>
-                Filler
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                paragraph
-                align={matchesSM ? "center" : undefined}
-              >
-                Filler Item
-              </Typography>
-             
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          container
-          className={classes.itemContainer}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
-          direction={matchesSM ? "column" : "row"}
-          md
-        >
-          <Grid item container direction="column" md>
-            <Grid item>
-              <ArtistVideoPage />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          container
-          className={classes.itemContainer}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
-          direction={matchesSM ? "column" : "row"}
-          md
-        >
-          <Grid item container direction="column" md>
-            <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "right"}>
-                Filler Item
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="body1"
-                paragraph
-                align={matchesSM ? "center" : "right"}
-              >
-                Filler Item
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid> */}
