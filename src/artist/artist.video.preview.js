@@ -30,7 +30,6 @@ class ArtistVideoPreview extends React.Component {
 
 const ArtistVideos = ({ videos }) => {
   const useStyles = makeStyles((theme) => ({
-    
     rowContainer: {
       paddingLeft: "5em",
       paddingRight: "5em",
@@ -39,7 +38,6 @@ const ArtistVideos = ({ videos }) => {
         paddingRight: "1.5em",
       },
     },
-    
   }));
 
   const theme = useTheme();
@@ -49,8 +47,8 @@ const ArtistVideos = ({ videos }) => {
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const opts = {
-    height: "270",
-    width: "430",
+    height: matchesXS ? "190" : "270",
+    width: matchesXS ? "340" : "430",
     playerVars: {
       // https://developers.google.com/youtube/player_paramete rs
       autoplay: 0,
@@ -63,9 +61,7 @@ const ArtistVideos = ({ videos }) => {
       container
       alignItems={matchesMD ? "center" : undefined}
       direction={matchesMD ? "column" : "row"}
-      
       styler={{ marginBottom: "20em" }}
-      className={classes.rowContainer}
     >
       <Grid
         item
@@ -75,13 +71,21 @@ const ArtistVideos = ({ videos }) => {
         direction={matchesSM ? "column" : "row"}
         md
       >
-        <Grid item container direction="row" md justify='center' justify="space-around" style={{marginBottom: '2em'}}>
+        <Grid
+          item
+          container
+          direction={matchesXS ? "column" : "row"}
+          alignItems={matchesXS ? "center" : null}
+          md
+          justify={matchesXS ? "center" : "space-around"}
+          style={{ marginBottom: "2em" }}
+        >
           {videos.map((video, index) =>
             video.name === "ajb" && currentLocation === "/ajb-yungbull" ? (
               <YouTube videoId={video.vidId} opts={opts} />
             ) : video.name === "banx" && currentLocation === "/karai-banx" ? (
               <YouTube videoId={video.vidId} opts={opts} />
-            ) : null
+            ) : undefined
           )}
         </Grid>
       </Grid>

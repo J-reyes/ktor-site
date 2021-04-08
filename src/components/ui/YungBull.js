@@ -23,15 +23,19 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     backgroundColor: "#0A0B0D",
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em",
+      marginTop: "2em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginTop: "2em",
+      marginTop: "1em",
     },
   },
   rowContainer: {
     paddingLeft: "5em",
     paddingRight: "5em",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "1.5em",
+      paddingRight: "1.5em",
+    },
     [theme.breakpoints.down("sm")]: {
       paddingLeft: "1.5em",
       paddingRight: "1.5em",
@@ -48,6 +52,15 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("md")]: {
       backgroundImage: `url(${ajbLogo})`,
+      height: "40em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      backgroundImage: `url(${ajbLogo})`,
+      height: "30em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: `url(${ajbLogo})`,
+      height: "20em",
     },
   },
   icon: {
@@ -64,6 +77,18 @@ const useStyles = makeStyles((theme) => ({
       width: "2.5em",
     },
   },
+  musicIcons: {
+    width: "40em",
+    [theme.breakpoints.down("md")]: {
+      width: "27em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "11em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "10em",
+    },
+  }
 }));
 
 export default function YungBull(props) {
@@ -153,7 +178,7 @@ export default function YungBull(props) {
           direction="column"
           md
           alignItems="center"
-          style={{ maxWidth: "40em" }}
+          className={classes.musicIcons}
         >
           <Grid item>
             <img alt="instagram logo" src={spotify} className={classes.icon} />
@@ -169,10 +194,11 @@ export default function YungBull(props) {
           direction="column"
           md
           alignItems="center"
+          className={classes.musicIcons}
           style={{
-            maxWidth: "40em",
-            marginTop: matchesSM ? "10em" : 0,
-            marginBottom: matchesSM ? "10em" : 0,
+            
+            // marginTop: matchesSM ? 0 : 0,
+            // marginBottom: matchesSM ? 0 : 0,
           }}
         >
           <Grid item>
@@ -189,7 +215,7 @@ export default function YungBull(props) {
           direction="column"
           md
           alignItems="center"
-          style={{ maxWidth: "40em" }}
+          className={classes.musicIcons}
         >
           <Grid item>
             <img alt="instagram logo" src={youtube} className={classes.icon} />
