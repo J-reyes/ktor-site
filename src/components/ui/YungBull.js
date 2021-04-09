@@ -51,16 +51,16 @@ const useStyles = makeStyles((theme) => ({
     height: "45em",
 
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url(${ajbLogo})`,
+      
       height: "40em",
     },
     [theme.breakpoints.down("sm")]: {
-      backgroundImage: `url(${ajbLogo})`,
+      
       height: "30em",
     },
     [theme.breakpoints.down("xs")]: {
-      backgroundImage: `url(${ajbLogo})`,
-      height: "20em",
+      
+      height: "15em",
     },
   },
   icon: {
@@ -74,7 +74,8 @@ const useStyles = makeStyles((theme) => ({
     height: "29em",
     width: "26em",
     [theme.breakpoints.down("xs")]: {
-      width: "2.5em",
+      height: "22em",
+      width: "16em",
     },
   },
   musicIcons: {
@@ -86,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
       width: "11em",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "10em",
+      width: "6em",
     },
   }
 }));
@@ -222,7 +223,7 @@ export default function YungBull(props) {
           </Grid>
         </Grid>
       </Grid>
-      {/* Digital documents and data section */}
+      
       <Grid
         item
         container
@@ -236,7 +237,7 @@ export default function YungBull(props) {
           container
           className={classes.itemContainer}
           direction={matchesSM ? "column" : "row"}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
+          style={{ marginBottom: matchesXS ? "5em" : matchesMD ? "15em" : 0 }}
           md
         >
           <Grid item container direction="column" md>

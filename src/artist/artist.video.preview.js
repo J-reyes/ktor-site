@@ -38,6 +38,9 @@ const ArtistVideos = ({ videos }) => {
         paddingRight: "1.5em",
       },
     },
+    vid: {
+      marginBottom: '2em'
+    }
   }));
 
   const theme = useTheme();
@@ -67,7 +70,6 @@ const ArtistVideos = ({ videos }) => {
         item
         container
         className={classes.itemContainer}
-        style={{ marginBottom: matchesMD ? "15em" : 0 }}
         direction={matchesSM ? "column" : "row"}
         md
       >
@@ -82,9 +84,9 @@ const ArtistVideos = ({ videos }) => {
         >
           {videos.map((video, index) =>
             video.name === "ajb" && currentLocation === "/ajb-yungbull" ? (
-              <YouTube videoId={video.vidId} opts={opts} />
+              <YouTube videoId={video.vidId} opts={opts} className={classes.vid}/>
             ) : video.name === "banx" && currentLocation === "/karai-banx" ? (
-              <YouTube videoId={video.vidId} opts={opts} />
+              <YouTube videoId={video.vidId} opts={opts} className={classes.vid}/>
             ) : undefined
           )}
         </Grid>
