@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     height: "50rem",
     backgroundColor: "#0A0B0D",
     [theme.breakpoints.down("lg")]: {
-      height: "40rem",
+      height: "43rem",
     },
     [theme.breakpoints.down("md")]: {
       height: "34rem",

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "2em",
     },
     [theme.breakpoints.down("xs")]: {
-      height: "37em",
+      height: "43.4em",
       marginTop: "1em",
     },
   },
@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       backgroundImage: `url(${background})`,
       height: "30em",
+      marginTop: '5em'
     },
   },
 }));
