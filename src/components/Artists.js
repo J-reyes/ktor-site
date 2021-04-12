@@ -18,10 +18,13 @@ const useStyles = makeStyles((theme) => ({
       height: "43rem",
     },
     [theme.breakpoints.down("md")]: {
-      height: "34rem",
+      height: "39rem",
     },
     [theme.breakpoints.down("sm")]: {
-      height: "38rem",
+      height: "39rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "43.5rem",
     },
   },
   artistLogoContrainer: {
