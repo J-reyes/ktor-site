@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
 export default function LandingPage(props) {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+  // const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  // const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+// import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typography from "@material-ui/core/Typography";
 import background from '../assets/greenLineBackgroundsvg.svg'
 
@@ -27,9 +27,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function About(props) {
   const classes = useStyles();
-  const theme = useTheme();
+  // const theme = useTheme();
 
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  // const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Grid

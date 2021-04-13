@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       height: "39rem",
     },
     [theme.breakpoints.down("xs")]: {
-      height: "43.5rem",
+      height: "43.7rem",
     },
   },
   artistLogoContrainer: {
@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "4rem",
       direction: "column"
     },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "4.4rem",
+      direction: "column"
+    },
   },
   ajbLogo: {
     width: "150px",
@@ -45,17 +49,31 @@ const useStyles = makeStyles((theme) => ({
       width: "142px",
       height: "135px",
     },
+    [theme.breakpoints.down("xs")]: {
+      width: "110px",
+      height: "100px",
+    },
   },
   banxLogo: {
     width: "350px",
-    height: "350px",
-    marginBottom: "-120px",
+    height: "353px",
+    marginBottom: "-138px",
+    marginTop: '1em',
     [theme.breakpoints.down("md")]: {
       width: "340px",
+      marginBottom: "-139px",
+      marginTop: '1em'
     },
     [theme.breakpoints.down("sm")]: {
       width: "260px",
       height: "324px",
+      marginBottom: "-165px",
+      marginTop: "3.6em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "150px",
+      height: "200px",
+      marginBottom: "-105px",
     },
   },
 }));
@@ -85,7 +103,6 @@ export default function Artists(props) {
         <Grid item justify="center" direction="column">
           <Grid
             item
-            container
             className={classes.ajbLogo}
           >
             <img src={ajbLogo} alt="ajbb" />
@@ -109,7 +126,7 @@ export default function Artists(props) {
           </Grid>
         </Grid>
         <Grid item justify="center" direction="column">
-          <Grid item container className={classes.banxLogo}>
+          <Grid item className={classes.banxLogo}>
             <img src={banxLogo} alt="quil pen sitting on top of book" />
           </Grid>
           <Grid item container alignItems="center" justify="center">

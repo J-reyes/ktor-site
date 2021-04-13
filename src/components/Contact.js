@@ -61,10 +61,10 @@ const useStyles = makeStyles((theme) => ({
       border: "2px solid white",
     },
   },
-  message: {
-    marginTop: "5em",
-    borderRadius: 5,
-  },
+  // message: {
+  //   marginTop: "5em",
+  //   borderRadius: 5,
+  // },
   sendButton: {
     color: "white",
     borderRadius: 50,
@@ -322,7 +322,7 @@ export default function Contact(props) {
                 // props we can pass into the input component
                 InputProps={{ disableUnderline: true }}
                 value={message}
-                className={classes.message}
+                
                 multiline
                 fullWidth
                 rows={10}
