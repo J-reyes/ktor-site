@@ -51,15 +51,12 @@ const useStyles = makeStyles((theme) => ({
     height: "45em",
 
     [theme.breakpoints.down("md")]: {
-      
       height: "40em",
     },
     [theme.breakpoints.down("sm")]: {
-      
       height: "30em",
     },
     [theme.breakpoints.down("xs")]: {
-      
       height: "15em",
     },
   },
@@ -73,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
   bioPic: {
     height: "29em",
     width: "26em",
+    [theme.breakpoints.down("md")]: {
+      height: "25em",
+      width: "20em",
+    },
     [theme.breakpoints.down("xs")]: {
       height: "22em",
       width: "16em",
@@ -89,7 +90,27 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "6em",
     },
-  }
+  },
+  bioText: {
+    fontSize: "1.25rem",
+    color: "white",
+    fontWeight: 300,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1rem",
+      color: "white",
+      fontWeight: 300,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".95rem",
+      color: "white",
+      fontWeight: 300,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: ".95rem",
+      color: "white",
+      fontWeight: 300,
+    },
+  },
 }));
 
 export default function YungBull(props) {
@@ -196,11 +217,12 @@ export default function YungBull(props) {
           md
           alignItems="center"
           className={classes.musicIcons}
-          style={{
-            
-            // marginTop: matchesSM ? 0 : 0,
-            // marginBottom: matchesSM ? 0 : 0,
-          }}
+          style={
+            {
+              // marginTop: matchesSM ? 0 : 0,
+              // marginBottom: matchesSM ? 0 : 0,
+            }
+          }
         >
           <Grid item>
             <img alt="instagram logo" src={apple} className={classes.icon} />
@@ -223,12 +245,12 @@ export default function YungBull(props) {
           </Grid>
         </Grid>
       </Grid>
-      
+
       <Grid
         item
         container
         alignItems={matchesMD ? "center" : undefined}
-        direction={matchesMD ? "column" : "row"}
+        direction={matchesMD ? "row" : "row"}
         justify="space-around"
         className={classes.rowContainer}
       >
@@ -237,7 +259,7 @@ export default function YungBull(props) {
           container
           className={classes.itemContainer}
           direction={matchesSM ? "column" : "row"}
-          style={{ marginBottom: matchesXS ? "5em" : matchesMD ? "15em" : 0 }}
+          style={{ marginBottom: matchesXS ? "5em" : matchesMD ? "2em" : 0 }}
           md
         >
           <Grid item container direction="column" md>
@@ -259,17 +281,17 @@ export default function YungBull(props) {
           direction={matchesSM ? "column" : "row"}
           md
         >
-          <Grid item container direction="column" md>
+          <Grid item container direction={matchesSM ? "column" : "row"} md>
             <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "left"}>
+              <Typography variant="h4" style={{marginBottom: "1em"}} align={matchesSM ? "center" : "left"}>
                 Bio
               </Typography>
             </Grid>
             <Grid item>
               <Typography
-                variant="body1"
+                className={classes.bioText}
                 paragraph
-                align={matchesSM ? "center" : "left"}
+                align={matchesXS ? "center" : "left"}
               >
                 Born and raised in Santa Ana, California. AJB YungBull has
                 always been a big dreamer. He setsgoals and aims for them
@@ -282,7 +304,7 @@ export default function YungBull(props) {
                 especially Hip-Hop, Funk, Classics, and Oldies.
               </Typography>
               <Typography
-                variant="body1"
+                className={classes.bioText}
                 paragraph
                 align={matchesSM ? "center" : "left"}
               >
