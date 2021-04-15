@@ -51,7 +51,7 @@ const ArtistVideos = ({ videos }) => {
 
   const opts = {
     height: matchesXS ? "190" : "270",
-    width: matchesXS ? "340" : "430",
+    width: matchesXS ? "340" : "400",
     playerVars: {
       // https://developers.google.com/youtube/player_paramete rs
       autoplay: 0,

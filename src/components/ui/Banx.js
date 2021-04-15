@@ -15,7 +15,7 @@ import youtube from "../../assets/youtube.svg";
 import apple from "../../assets/apple-music.svg";
 import banxBioPic from "../../assets/banxBioPic.jpeg";
 
-import ArtistVideoPage from '../../artist/artist.video.page';
+import ArtistVideoPage from "../../artist/artist.video.page";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     backgroundColor: "#0A0B0D",
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em",
+      marginTop: "2em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginTop: "2em",
+      marginTop: "1em",
     },
   },
   rowContainer: {
@@ -47,7 +47,13 @@ const useStyles = makeStyles((theme) => ({
     height: "50em",
 
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url(${karaiBanxLogo})`,
+      height: "40em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "30em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "20em",
     },
   },
   icon: {
@@ -57,11 +63,48 @@ const useStyles = makeStyles((theme) => ({
       width: "2.5em",
     },
   },
+  musicIcons: {
+    width: "40em",
+    [theme.breakpoints.down("md")]: {
+      width: "27em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "11em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "7em",
+    },
+  },
   bioPic: {
     height: "29em",
     width: "24em",
+    [theme.breakpoints.down("md")]: {
+      height: "25em",
+      width: "20em",
+    },
     [theme.breakpoints.down("xs")]: {
-      width: "2.5em",
+      height: "22em",
+      width: "16em",
+    },
+  },
+  bioText: {
+    fontSize: "1.25rem",
+    color: "white",
+    fontWeight: 300,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1rem",
+      color: "white",
+      fontWeight: 300,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".95rem",
+      color: "white",
+      fontWeight: 300,
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: ".95rem",
+      color: "white",
+      fontWeight: 300,
     },
   },
 }));
@@ -157,7 +200,7 @@ export default function Banx(props) {
           direction="column"
           md
           alignItems="center"
-          style={{ maxWidth: "40em" }}
+          className={classes.musicIcons}
         >
           <Grid item>
             <img alt="instagram logo" src={spotify} className={classes.icon} />
@@ -173,11 +216,7 @@ export default function Banx(props) {
           direction="column"
           md
           alignItems="center"
-          style={{
-            maxWidth: "40em",
-            marginTop: matchesSM ? "10em" : 0,
-            marginBottom: matchesSM ? "10em" : 0,
-          }}
+          className={classes.musicIcons}
         >
           <Grid item>
             <img alt="instagram logo" src={apple} className={classes.icon} />
@@ -193,19 +232,19 @@ export default function Banx(props) {
           direction="column"
           md
           alignItems="center"
-          style={{ maxWidth: "40em" }}
+          className={classes.musicIcons}
         >
           <Grid item>
             <img alt="instagram logo" src={youtube} className={classes.icon} />
           </Grid>
         </Grid>
       </Grid>
-      {/* Digital documents and data section */}
+
       <Grid
         item
         container
         alignItems={matchesMD ? "center" : undefined}
-        direction={matchesMD ? "column" : "row"}
+        direction={matchesMD ? "row" : "row"}
         justify="space-around"
         className={classes.rowContainer}
       >
@@ -214,16 +253,12 @@ export default function Banx(props) {
           container
           className={classes.itemContainer}
           direction={matchesSM ? "column" : "row"}
-          style={{ marginBottom: matchesMD ? "15em" : 0 }}
+          style={{ marginBottom: matchesXS ? "5em" : matchesMD ? "2em" : 0 }}
           md
         >
           <Grid item container direction="column" md>
             <Grid item align="center">
-              <img
-                alt="Banx Bio"
-                src={banxBioPic}
-                className={classes.bioPic}
-              />
+              <img alt="Banx Bio" src={banxBioPic} className={classes.bioPic} />
             </Grid>
           </Grid>
           <Grid item md></Grid>
@@ -236,7 +271,7 @@ export default function Banx(props) {
           direction={matchesSM ? "column" : "row"}
           md
         >
-          <Grid item container direction="column" md>
+          <Grid item container direction={matchesSM ? "column" : "row"} md>
             <Grid item>
               <Typography variant="h4" align={matchesSM ? "center" : "left"}>
                 Bio
@@ -244,9 +279,9 @@ export default function Banx(props) {
             </Grid>
             <Grid item>
               <Typography
-                variant="body1"
+                className={classes.bioText}
                 paragraph
-                align={matchesSM ? "center" : "left"}
+                align={matchesXS ? "center" : "left"}
                 style={{ lineHeight: "2" }}
               >
                 Born and raised in Westminster California, Karai Banx is
@@ -255,20 +290,20 @@ export default function Banx(props) {
                 artist. At the age of 17, Karai Banx began writing to express
                 his feelings and thoughts, and since then has used writing as
                 away to deal with struggles in his life. Karai Banx has a unique
-                sound and wants to share it with the world. He is looking to take
-                his opportunities to the next level, while always staying motivated
-                to unify withh his supporters.
+                sound and wants to share it with the world. He is looking to
+                take his opportunities to the next level, while always staying
+                motivated to unify withh his supporters.
               </Typography>
               <Typography
-                variant="body1"
+                className={classes.bioText}
                 paragraph
-                align={matchesSM ? "center" : "left"}
+                align={matchesXS ? "center" : "left"}
                 style={{ lineHeight: "2" }}
               >
                 Karai Banx has been working tirelessly to better his craft and
                 plans to release new and improved music at least once every
-                month. He knows that his supporters have his back and he has theirs,
-                so keep a look out for Karai Banx!
+                month. He knows that his supporters have his back and he has
+                theirs, so keep a look out for Karai Banx!
               </Typography>
             </Grid>
           </Grid>
