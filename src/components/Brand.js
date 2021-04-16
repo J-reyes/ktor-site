@@ -20,7 +20,23 @@ const useStyles = makeStyles((theme) => ({
     height: "60em",
 
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url(${background})`,
+      height: "40em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "43.2em",
+    },
+  },
+  textContainer: {
+    width: "40rem",
+    marginTop: "3rem",
+    marginBottom: "14rem",
+    [theme.breakpoints.down("sm")]: {
+      width: "35rem",
+      marginBottom: "9rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "25rem",
+      marginBottom: "9rem",
     },
   },
 }));
@@ -46,12 +62,9 @@ export default function Brand(props) {
             container
             align="center"
             justify="center"
-            style={{ width: "40rem", marginTop: "3rem", marginBottom: "14rem" }}
+            className={classes.textContainer}
           >
-            <Typography
-              variant="h2"
-              style={{ fontWeight: "700" }}
-            >
+            <Typography variant="h2" style={{ fontWeight: "700" }}>
               Coming Soon
             </Typography>
           </Grid>
