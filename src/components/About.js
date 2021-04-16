@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 // import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typography from "@material-ui/core/Typography";
-import background from '../assets/greenLineBackgroundsvg.svg'
+import background from "../assets/greenLineBackgroundsvg.svg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     maxWidth: "100%",
-    
+
     backgroundColor: "#0A0B0D",
 
     backgroundImage: `url(${background})`,
@@ -21,6 +21,27 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("md")]: {
       backgroundImage: `url(${background})`,
+    },
+  },
+  textContainer: {
+    width: "40rem",
+    marginTop: "3rem",
+    marginBottom: "14rem",
+    [theme.breakpoints.down("sm")]: {
+      width: "30rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "25rem",
+    },
+  },
+  pText: {
+    fontSize: "1.2rem",
+    lineHeight: "2",
+    fontWeight: "700",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1rem",
+      lineHeight: "2",
+      fontWeight: "700",
     },
   },
 }));
@@ -51,7 +72,7 @@ export default function About(props) {
               About Us
             </Typography>
           </Grid>
-          <Grid item container style={{ width: "40rem", marginTop: "3rem" , marginBottom: '14rem'}}>
+          <Grid item container className={classes.textContainer}>
             <Typography
               variant="h3"
               align="center"
@@ -66,7 +87,7 @@ export default function About(props) {
             <Typography
               variant="h4"
               align="left"
-              style={{ fontSize: "1.2rem", lineHeight: "2", fontWeight: "700" }}
+              className={classes.pText}
             >
               The kill Them Off Records is a positive movement of expression
               through music, photography, and fashion. While promoting artist
