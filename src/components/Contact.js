@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     backgroundColor: "#0A0B0D",
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em",
+      marginTop: "2em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginTop: "2em",
+      marginTop: "1em",
     },
   },
   background: {
@@ -84,6 +84,12 @@ const useStyles = makeStyles((theme) => ({
       width: 225,
     },
   },
+  contactHeader: {
+    fontSize: "5.5rem",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "4.5rem",
+    },
+  }
 }));
 
 export default function Contact(props) {
@@ -217,8 +223,8 @@ export default function Contact(props) {
         alignItems="center"
         justify="center"
         style={{
-          marginBottom: matchesMD ? "5em" : 0,
-          marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0,
+          marginBottom: matchesMD ? 0 : 0,
+          marginTop: matchesSM ? "1em" : matchesMD ? 0 : 0,
         }}
         className={classes.background}
       >
@@ -229,6 +235,7 @@ export default function Contact(props) {
               <Typography
                 align={matchesMD ? "center" : undefined}
                 variant="h2"
+                className={classes.contactHeader}
                 style={{ lineHeight: 1 }}
               >
                 Contact Us
