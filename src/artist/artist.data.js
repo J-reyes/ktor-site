@@ -9,10 +9,10 @@ const ARTIST_DATA = [
         videoUrl: "https://www.youtube.com/watch?v=SunUmUoyZT8",
       },
       {
-        vidId: "XbsRY6RCMn8",
+        vidId: "Z0osuo9rQyQ",
         name:
         'ajb',
-        videoUrl: "https://www.youtube.com/watch?v=XbsRY6RCMn8",
+        videoUrl: "https://www.youtube.com/watch?v=Z0osuo9rQyQ",
       },
       {
         vidId: "so1tt8YD9Mw",
